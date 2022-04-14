@@ -5,6 +5,8 @@ import StartPage from "./components/start-page/StartPate";
 import Steps from "./components/steps/Steps";
 import HealthForm from "./components/health-form/HealthForm";
 import Calculating from './components/calculating/Calculating';
+import SixMinWalking from './components/6mins-walking/SixMinWalking';
+import Summary from './components/summary/Summary';
 
 export enum ActivityLevel {
     HIGH = 'high',
@@ -24,18 +26,36 @@ export type QuestionnaireType = {
 
 export type FormsData = {
     questionnaire: QuestionnaireType | null
+    distance: string | null
+}
+
+enum PassesSteps {
+    START,
+    STEPS,
+    FORM,
+    WALKING
 }
 
 function App() {
 
+    const [passedStep, setPassedStep] = useState<PassesSteps | null>(null)
+
     const [data, setData] = useState<FormsData>({
-        questionnaire: null
+        questionnaire: null,
+        distance: null
     })
 
-    const onHealthFormSubmit = (data: QuestionnaireType) => {
+    const onHealthFormSubmit = (payload: QuestionnaireType) => {
         setData({
             ...data,
-            questionnaire: data
+            questionnaire: payload
+        })
+    }
+
+    const onSixMinutesSubmit = (distance: string) => {
+        setData({
+            ...data,
+            distance
         })
     }
 
@@ -46,6 +66,8 @@ function App() {
             <Route path={"/steps"} element={<Steps/>}/>
             <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
             <Route path={"/calculating"} element={<Calculating />}/>
+            <Route path="/walking" element={<SixMinWalking distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
+            <Route path="/summary" element={<Summary/>}/>
         </Routes>
     );
 }
