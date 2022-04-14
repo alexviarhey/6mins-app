@@ -79,3 +79,37 @@
         }
     }
 }
+
+@media screen and (max-width: 1300px) {
+    .health-form-wrapper .health-form-wrapper-img img {
+        width: 460px !important;
+        height: 420px !important;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .health-form-wrapper .health-form-wrapper-form {
+        margin-right: 0;
+    }
+    .health-form-wrapper .health-form-wrapper-img img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .health-form-outer {
+        padding: 35px 87px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .health-form-outer {
+        padding: 35px 60px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .health-form-outer {
+        padding: 35px 30px;
+    }
+}
