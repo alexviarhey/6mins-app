@@ -25,6 +25,7 @@ export type QuestionnaireType = {
 
 export type FormsData = {
     questionnaire: QuestionnaireType | null
+    distance: string | null
 }
 
 enum PassesSteps {
@@ -39,24 +40,32 @@ function App() {
     const [passedStep, setPassedStep] = useState<PassesSteps | null>(null)
 
     const [data, setData] = useState<FormsData>({
-        questionnaire: null
+        questionnaire: null,
+        distance: null
     })
 
-    const onHealthFormSubmit = (data: QuestionnaireType) => {
+    const onHealthFormSubmit = (payload: QuestionnaireType) => {
         setData({
             ...data,
-            questionnaire: data
+            questionnaire: payload
+        })
+    }
+
+    const onSixMinutesSubmit = (distance: string) => {
+        setData({
+            ...data,
+            distance
         })
     }
 
     return (
 
         <Routes>
-            <Route path={"/"} element={<StartPage/>}/>
-            <Route path={"/steps"} element={<Steps/>}/>
-            <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
-            <Route path={"/walking"} element={<SixMinWalking/>}/>
-            <Route path={"/summary"} element={<Summary/>}/>
+            <Route path="/" element={<StartPage/>}/>
+            <Route path="/steps" element={<Steps/>}/>
+            <Route path="/form" element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
+            <Route path="/walking" element={<SixMinWalking distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
+            <Route path="/summary" element={<Summary/>}/>
         </Routes>
     );
 }
