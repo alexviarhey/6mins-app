@@ -1,0 +1,67 @@
+.health-form-outer {
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 144px;
+}
+
+.health-form-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &-form {
+    margin-right: 70px;
+
+    .covid {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .ant-form-item-label {
+        padding: 0;
+        margin-right: 37px;
+      }
+    }
+
+    .description {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 16px;
+      color: #646464;
+      height: 20px;
+      margin-bottom: 16px;
+      margin-left: 25px;
+      margin-top: 5px;
+    }
+
+    .ant-radio-group-outline {
+      display: flex;
+      flex-direction: column;
+
+      .ant-radio-wrapper {
+      }
+    }
+
+    &--title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      color: #343F56;
+      margin-bottom: 32px;
+    }
+  }
+
+  &-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 633px;
+      height: 599px;
+    }
+  }
+}
