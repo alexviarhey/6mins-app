@@ -1,30 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import {Routes, Route} from 'react-router-dom';
 import './App.css';
-import Button from './components/button/button';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Input from './components/input/Input';
-import Checkbox from './components/checkbox/Checkbox';
+import StartPage from "./components/start-page/StartPate";
+import Steps from "./components/steps/Steps";
+import HealthForm from "./components/health-form/HealthForm";
 
+export enum ActivityLevel {
+    HIGH = 'high',
+    MIDDLE = 'middle',
+    LOW = 'low'
+}
+
+export type QuestionnaireType = {
+    activityLevel: ActivityLevel
+    age: string
+    covid: boolean
+    heartRate: string
+    height: string
+    lungInjury: string
+    weight: string
+}
+
+export type FormsData = {
+    questionnaire: QuestionnaireType | null
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Input name='name' label='Имя'/>
-        <Checkbox 
-          checked={true} 
-          label={'Перенесенная covid-инфекция '}
-          onChange={() => console.log('hi')}
-        />
-        <Button 
-          name='Продолжить' 
-          icon={faChevronRight}
-        />
-      </header>
-    </div>
-  );
+
+    const [data, setData] = useState<FormsData>({
+        questionnaire: null
+    })
+
+    const onHealthFormSubmit = (data: QuestionnaireType) => {
+        setData({
+            ...data,
+            questionnaire: data
+        })
+    }
+
+    return (
+
+        <Routes>
+            <Route path={"/"} element={<StartPage/>}/>
+            <Route path={"/steps"} element={<Steps/>}/>
+            <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
+        </Routes>
+    );
 }
 
 export default App;

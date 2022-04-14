@@ -1,31 +1,17 @@
-import React from 'react';
-import styles from './input.module.scss';
+import React from 'react'
+import { Form, Input, Button, Checkbox } from 'antd';
 
-type InputProps = {
-    label?: string,
-    name?: string,
-    type?: string,
-    onChange?: () => void
+type PropsType = {
+    name?: string
+    label?: string
+    value?: string
 }
 
-const Input: React.FC<InputProps> = ({ 
-    label,
-    name,
-    type='text',
-    onChange
-}) => {
-    
+export const CustomInput: React.FC<PropsType> = ({ name, value, label }) => {
     return (
-        <div className={styles.input}>
-            <label htmlFor={name} className={styles.inputLabel}>{label}</label>
-            <input 
-                id={name}
-                type={type} 
-                className={styles.inputField}
-                onChange={onChange}
-            />
+        <div>
+            <div></div>
+            <Input />
         </div>
-    );
-};
-
-export default Input;
+    )
+}
