@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import apply from '../../assets/images/apply-form.svg'
-import {Form, Input, Button, Radio, Checkbox} from 'antd';
+import {Form, Input, Radio, Checkbox} from 'antd';
 import './health-form.scss'
 import {CheckboxChangeEvent} from "antd/es/checkbox";
 import {QuestionnaireType} from "../../App";
+import Button from '../button/button';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 type PropsType = {
     data: QuestionnaireType | null
@@ -62,7 +64,7 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
                             rules={[{required: true, message: 'Введите рост!'}]}
                             name="height"
                         >
-                            <Input type='number'/>
+                            <Input type='number' className='health-form-wrapper-form--input'/>
                         </Form.Item>
                         <Form.Item
                             label="Масса тела (кг)"
@@ -116,7 +118,12 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
                             </Radio.Group>
                         </Form.Item>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit"> Продолжить</Button>
+                            <Button 
+                                name='Продолжить' 
+                                type="submit" 
+                                icon={faChevronRight}
+                                className='submit-button'
+                            />
                         </Form.Item>
                     </Form>
                 </div>

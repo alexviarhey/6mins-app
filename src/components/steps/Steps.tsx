@@ -6,6 +6,8 @@ import columns from '../../assets/icons/columns-icon.svg'
 import questions from '../../assets/images/question-img.svg'
 import caution from '../../assets/images/caution.svg'
 import {useNavigate} from "react-router-dom";
+import Button from '../button/button'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Steps = () => {
 
@@ -44,7 +46,12 @@ const Steps = () => {
                             </div>
                         </div>
                     </div>
-                    <button onClick={next}>Продолжить</button>
+                    <Button 
+                        onClick={next} 
+                        name={'Продолжить'}
+                        icon={faChevronRight}
+                        className={'next-button'}
+                    />
                 </div>
                 <div className='technique_outer_right'>
                     <img src={questions} alt=""/>

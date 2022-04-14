@@ -9,9 +9,6 @@ type PropsType = {
 
 export const CustomInput: React.FC<PropsType> = ({ name, value, label }) => {
     return (
-        <div>
-            <div></div>
-            <Input />
-        </div>
+        <Input />
     )
 }

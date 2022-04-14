@@ -1,5 +1,6 @@
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classnames from 'classnames';
 import React from 'react';
 import styles from './button.module.scss';
 
@@ -20,11 +21,11 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
     return (
         <button 
-            className={styles.button} 
+            className={classnames(className, styles.button)} 
             onClick={() => onClick && onClick()}
             type={type}
         >
-            {name}
+            <span style={{ textAlign: 'center' }}>{name}</span>
             {icon && <FontAwesomeIcon icon={icon} />}
         </button>
     );
