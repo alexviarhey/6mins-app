@@ -23,8 +23,7 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
 
     const [form] = Form.useForm();
 
-    const initialValues = {
-        activityLevel: "high",
+    const initialValues: any = {
         covid: false,
         lungInjury: 0
     }
@@ -33,9 +32,11 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
         const isChecked = e.target.checked
         if (isChecked) {
             setIsLungInjuryDisabled(false)
+            form.setFieldsValue({ activityLevel: 'high' })
+            form.setFieldsValue({ covid: true })
         } else {
             !isLungInjuryDisabled && setIsLungInjuryDisabled(true)
-            form.resetFields(['lungInjury'])
+            form.resetFields(['lungInjury', 'activityLevel'])
         }
     }
 
@@ -100,8 +101,8 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
                         >
                             <Input disabled={isLungInjuryDisabled} type='number'/>
                         </Form.Item>
-                        <Form.Item label="Уровень физической активности" name="activityLevel">
-                            <Radio.Group value='vertical'>
+                        <Form.Item label="Уровень физической активности до болезни" name="activityLevel">
+                            <Radio.Group disabled={isLungInjuryDisabled} value='vertical'>
                                 <Radio value="high">Высокий</Radio>
                                 <div className='description'>
                                     10000 шагов в день или 4 и более занятия физической активностью в неделю

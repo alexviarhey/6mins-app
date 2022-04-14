@@ -24,7 +24,7 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit}) => {
     const onFinish = (values: { distance: string }) => {
         onSubmit(values.distance)
         console.log('Success:', values);
-        navigate("/calculating")
+        navigate("/summary")
     }
 
     return (

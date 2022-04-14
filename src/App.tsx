@@ -6,6 +6,7 @@ import Steps from "./components/steps/Steps";
 import HealthForm from "./components/health-form/HealthForm";
 import SixMinWalking from "./components/6mins-walking/SixMinWalking";
 import Summary from "./components/summary/Summary";
+import {getZones} from "./recomendations/zones";
 
 export enum ActivityLevel {
     HIGH = 'high',
@@ -35,7 +36,11 @@ enum PassesSteps {
     WALKING
 }
 
+getZones("26", "65")
+
 function App() {
+
+
 
     const [passedStep, setPassedStep] = useState<PassesSteps | null>(null)
 
@@ -65,7 +70,7 @@ function App() {
             <Route path="/steps" element={<Steps/>}/>
             <Route path="/form" element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
             <Route path="/walking" element={<SixMinWalking distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
-            <Route path="/summary" element={<Summary/>}/>
+            <Route path="/summary" element={<Summary data={data}/>}/>
         </Routes>
     );
 }
