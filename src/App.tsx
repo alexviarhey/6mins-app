@@ -5,6 +5,7 @@ import StartPage from "./components/start-page/StartPate";
 import Steps from "./components/steps/Steps";
 import HealthForm from "./components/health-form/HealthForm";
 import SixMinWalking from "./components/6mins-walking/SixMinWalking";
+import Summary from "./components/summary/Summary";
 
 export enum ActivityLevel {
     HIGH = 'high',
@@ -55,6 +56,7 @@ function App() {
             <Route path={"/steps"} element={<Steps/>}/>
             <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
             <Route path={"/walking"} element={<SixMinWalking/>}/>
+            <Route path={"/summary"} element={<Summary/>}/>
         </Routes>
     );
 }

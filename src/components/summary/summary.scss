@@ -1,0 +1,115 @@
+.summary_outer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+}
+
+.summary_container {
+  display: flex;
+  justify-content: space-between;
+
+  &_left {
+
+    &--title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      color: #343F56;
+      margin-bottom: 32px;
+    }
+
+    &_items {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 49px;
+
+      &_item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+          width: 30px;
+          height: 32px;
+          margin-right: 20px;
+        }
+
+        div {
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #343F56;
+        }
+      }
+    }
+
+    &--pulse_title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      color: #343F56;
+      margin-bottom: 13px;
+    }
+
+    &_zones {
+      display: flex;
+      flex-direction: column;
+
+      &_zone {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        img {
+          width: 34px;
+          height: 32px;
+          margin-right: 20px;
+        }
+
+        .zone {
+          display: flex;
+          align-items: center;
+          padding: 2px 13px;
+          height: 55px;
+          justify-content: space-between;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 22px;
+          color: #FFFFFF;
+          border-radius: 10px;
+          min-width: 700px;
+
+          &-value_outer {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        .pink {
+          background: rgba(161, 92, 250, 0.6);
+        }
+
+        .blue {
+          background: #84AEFD;
+        }
+
+        .green {
+          background: rgba(12, 188, 82, 0.6);
+        }
+      }
+    }
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
