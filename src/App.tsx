@@ -36,7 +36,6 @@ enum PassesSteps {
 }
 
 function App() {
-
     const [passedStep, setPassedStep] = useState<PassesSteps | null>(null)
 
     const [data, setData] = useState<FormsData>({
@@ -65,7 +64,7 @@ function App() {
             <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
             <Route path="/walking" element={<SixMinWalking distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
             <Route path={"/calculating"} element={<Calculating />}/>
-            <Route path="/summary" element={<Summary/>}/>
+            <Route path="/summary" element={<Summary data={data}/>}/>
         </Routes>
     );
 }

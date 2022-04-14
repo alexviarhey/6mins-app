@@ -10,6 +10,7 @@ import {useNavigate} from "react-router-dom";
 import RadioButton from '../radio-button/RadioButton';
 import Checkbox from '../checkbox/Checkbox';
 
+
 type PropsType = {
     data: QuestionnaireType | null
     onSubmit: (data: QuestionnaireType) => void
@@ -28,8 +29,7 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
 
     const [form] = Form.useForm();
 
-    const initialValues = {
-        activityLevel: "high",
+    const initialValues: any = {
         covid: false,
         lungInjury: 0
     }
@@ -39,10 +39,12 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
         if (isChecked) {
             setisCovid(true);
             setIsLungInjuryDisabled(false)
+            form.setFieldsValue({ activityLevel: 'high' })
+            form.setFieldsValue({ covid: true })
         } else {
             setisCovid(false);
             !isLungInjuryDisabled && setIsLungInjuryDisabled(true)
-            form.resetFields(['lungInjury'])
+            form.resetFields(['lungInjury', 'activityLevel'])
         }
     }
 
@@ -110,8 +112,8 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
                         >
                             <Input disabled={isLungInjuryDisabled} type='number' className='health-form-wrapper-form--input'/>
                         </Form.Item>
-                        <Form.Item label="Уровень физической активности" name="activityLevel">
-                            <Radio.Group value='vertical' defaultValue={'high'}>
+                        <Form.Item label="Уровень физической активности до болезни" name="activityLevel">
+                            <Radio.Group disabled={isLungInjuryDisabled} value='vertical'>
                                 <RadioButton value="high" label='Высокий'/>
                                 <div className='description'>
                                     10000 шагов в день или 4 и более занятия физической активностью в неделю
