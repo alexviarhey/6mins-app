@@ -1,11 +1,41 @@
 .calculating {
     background-color: #F8F9FA;
     min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .blue-wheel {
+        position: absolute;
+        right: 8.54%;
+        bottom: 20.41%;
+        z-index: 99;
+    }
+    .orange-wheel {
+        position: absolute;
+        right: 8.14%;
+        top: 30.47%;
+        z-index: 99;
+    }
+    .pink-wheel {
+        position: absolute;
+        left: 9.38%;
+        top: 69.04%;
+        z-index: 99;
+    }
+    .yellow-wheel {
+        position: absolute;
+        left: 13.47%;
+        top: 16.21%;
+        z-index: 99;
+    }
     &-inner {
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        z-index: 100;
         &--title {
             font-weight: 600;
             font-size: 28px;

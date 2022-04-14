@@ -1,10 +1,19 @@
+import classNames from 'classnames';
 import React from 'react';
 import WHEEL from '../../assets/icons/shester.svg';
 import './animated-wheel.scss';
 
-const AnimatedWheel: React.FC = () => {
+type AnimatedWheelProps = {
+    icon?: string
+    className?: string
+}
+
+const AnimatedWheel: React.FC<AnimatedWheelProps> = ({ 
+    icon=WHEEL,
+    className
+}) => {
     return (
-        <img src={WHEEL} alt="" className='wheel' />
+        <img src={icon} alt="" className={classNames(className, 'wheel')} />
     )
 }
 
