@@ -4,6 +4,7 @@ import './App.css';
 import StartPage from "./components/start-page/StartPate";
 import Steps from "./components/steps/Steps";
 import HealthForm from "./components/health-form/HealthForm";
+import SixMinWalking from "./components/6mins-walking/SixMinWalking";
 
 export enum ActivityLevel {
     HIGH = 'high',
@@ -25,7 +26,16 @@ export type FormsData = {
     questionnaire: QuestionnaireType | null
 }
 
+enum PassesSteps {
+    START,
+    STEPS,
+    FORM,
+    WALKING
+}
+
 function App() {
+
+    const [passedStep, setPassedStep] = useState<PassesSteps | null>(null)
 
     const [data, setData] = useState<FormsData>({
         questionnaire: null
@@ -44,6 +54,7 @@ function App() {
             <Route path={"/"} element={<StartPage/>}/>
             <Route path={"/steps"} element={<Steps/>}/>
             <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
+            <Route path={"/walking"} element={<SixMinWalking/>}/>
         </Routes>
     );
 }

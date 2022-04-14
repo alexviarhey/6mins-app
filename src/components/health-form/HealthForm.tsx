@@ -4,6 +4,7 @@ import {Form, Input, Button, Radio, Checkbox} from 'antd';
 import './health-form.scss'
 import {CheckboxChangeEvent} from "antd/es/checkbox";
 import {QuestionnaireType} from "../../App";
+import {useNavigate} from "react-router-dom";
 
 type PropsType = {
     data: QuestionnaireType | null
@@ -11,6 +12,8 @@ type PropsType = {
 }
 
 const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (data) form.setFieldsValue(data)
@@ -39,6 +42,7 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
     const onFinish = (values: QuestionnaireType) => {
         onSubmit(values)
         console.log('Success:', values);
+        navigate("/walking")
     }
 
     return (
@@ -53,9 +57,6 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
                         layout="vertical"
                         onFinish={onFinish}
                         initialValues={initialValues}
-                        //initialValues={{ requiredMarkValue: requiredMark }}
-                        //onValuesChange={onRequiredTypeChange}
-                        //requiredMark={requiredMark}
                     >
                         <Form.Item
                             label="Рост (см)"
