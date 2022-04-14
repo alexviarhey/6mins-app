@@ -1,6 +1,6 @@
 import React from 'react'
 import check from '../../assets/icons/checkmark-pink.svg'
-import heart from '../../assets/icons/heart-beat-filled.svg'
+import heart from '../../assets/icons/heart-beat-outlined.svg'
 import './summary.scss'
 import analitic from '../../assets/images/analitic.svg'
 import {FormsData} from "../../App";
