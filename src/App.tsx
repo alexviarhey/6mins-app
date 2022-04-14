@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import StartPage from "./components/start-page/StartPate";
 import Steps from "./components/steps/Steps";
 import HealthForm from "./components/health-form/HealthForm";
@@ -60,13 +59,12 @@ function App() {
     }
 
     return (
-
         <Routes>
             <Route path={"/"} element={<StartPage/>}/>
             <Route path={"/steps"} element={<Steps/>}/>
             <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
-            <Route path={"/calculating"} element={<Calculating />}/>
             <Route path="/walking" element={<SixMinWalking distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
+            <Route path={"/calculating"} element={<Calculating />}/>
             <Route path="/summary" element={<Summary/>}/>
         </Routes>
     );

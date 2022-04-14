@@ -12,9 +12,18 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
+    transition: .25s;
     svg {
         margin-left: 12px;
         width: 9px !important;
         height: 16px;
+    }
+    &:hover {
+        background-color: rgba(12, 188, 139, .8);
+        transition: .25s;
+        color: white;
+        svg {
+            color: white;
+        }
     }
 }

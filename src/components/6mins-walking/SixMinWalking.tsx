@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
 import checkSquare from '../../assets/icons/check-square.svg'
 import {Form, Input} from "antd";
-import {Button} from 'antd';
 import todo from '../../assets/images/to-do.svg'
 import './six-min-walking.scss'
 import {useNavigate} from "react-router-dom";
+import Button from "../button/button";
 
 type PropsType = {
     distance: string | null
@@ -48,8 +48,7 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit}) => {
                                         мере 2 часа до теста.
                                     </div>
                                 </div>
-                            </div>
-                            <div className='walking_top_container-left-items-item'>
+                                <div className='walking_top_container-left-items-item'>
                                 <img src={checkSquare} alt=""/>
                                 <div>
                                     Выберите место с заранее известным метражом (например длина комнатв вдоль одной из
@@ -88,6 +87,7 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit}) => {
                                     АД на
                                     4, 6 и 10-й минутах отдыха
                                 </div>
+                            </div>
                             </div>
                         </div>
                         <div className='walking_top_container-right'>
@@ -174,7 +174,11 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit}) => {
                                 </div>
                                 <div>
                                     <Form.Item>
-                                        <Button type="primary" danger htmlType="submit"> Завершить</Button>
+                                        <Button 
+                                            name="Завершить" 
+                                            type="submit"
+                                            className="finish-button" 
+                                        />
                                     </Form.Item>
                                 </div>
                             </div>

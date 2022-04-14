@@ -1,6 +1,6 @@
 .steps_outer {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -9,7 +9,7 @@
     display: flex;
     min-height: 512px;
     max-height: 512px;
-    padding: 106px 55px 51px 107px;
+    padding: 106px 55px 48px 107px;
     background: #f8f9fa;
     &_left {
         padding-right: 100px;
@@ -68,6 +68,10 @@
             background-color: rgba(54, 124, 255, 0.15);
             border: 1px solid rgba(54, 124, 255, 1);
             color: rgba(54, 124, 255, 1);
+            &:hover {
+                background-color: rgba(54, 124, 255, .8);
+                color: white;
+            }
         }
     }
 }
@@ -75,7 +79,8 @@
 .restrictions_outer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 56px 48px 0 107px;
     background: #7B5CFA;
     min-height: 512px;
     max-height: 512px;
