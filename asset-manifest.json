@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/6mins-app/static/css/main.722d3632.css",
+    "main.js": "/6mins-app/static/js/main.bae8acca.js",
+    "static/js/787.b9a69101.chunk.js": "/6mins-app/static/js/787.b9a69101.chunk.js",
+    "static/media/to-do.svg": "/6mins-app/static/media/to-do.fbee4785a556a2aff207f5c185a98453.svg",
+    "static/media/analitic.svg": "/6mins-app/static/media/analitic.26765d3564a10bd7db50f5d10d949a8d.svg",
+    "static/media/Health-checkup.svg": "/6mins-app/static/media/Health-checkup.ee0d16618d228c1ff7159ad1c7c081f0.svg",
+    "static/media/data-report.svg": "/6mins-app/static/media/data-report.e13e9e023a662ade644aef810cc17d8b.svg",
+    "static/media/apply-form.svg": "/6mins-app/static/media/apply-form.c3ef186d405919495ced818fcdb0ca46.svg",
+    "static/media/caution.svg": "/6mins-app/static/media/caution.cdcbe24359267825c8e582a474edc465.svg",
+    "static/media/question-img.svg": "/6mins-app/static/media/question-img.21a63ed01c39e20e35e25b439b3c77f0.svg",
+    "static/media/orange_wheel.svg": "/6mins-app/static/media/orange_wheel.68691230b26effe1cc6f51643fd41757.svg",
+    "static/media/pink_wheel.svg": "/6mins-app/static/media/pink_wheel.ab51695c887b40243805023232d26677.svg",
+    "static/media/shester.svg": "/6mins-app/static/media/shester.f2c5140f19d054a5d8077a5e8548514c.svg",
+    "static/media/blue_wheel.svg": "/6mins-app/static/media/blue_wheel.30aac8e38392dbaee89ea4adf126b8a6.svg",
+    "static/media/heart-beat-outlined.svg": "/6mins-app/static/media/heart-beat-outlined.7157022a213ebc2c9bc3aa5e87428a64.svg",
+    "static/media/heart-beat-filled.svg": "/6mins-app/static/media/heart-beat-filled.98bec37282bc30c45247017fc7b16d08.svg",
+    "static/media/checkmark-pink.svg": "/6mins-app/static/media/checkmark-pink.11812edb44ab642033c201713683612a.svg",
+    "static/media/shoe-icon.svg": "/6mins-app/static/media/shoe-icon.b04f6de012700f00633fa02a25e23eaa.svg",
+    "index.html": "/6mins-app/index.html",
+    "static/media/check-square.svg": "/6mins-app/static/media/check-square.9b9334fa840c6f54f9d0d293dafd5ede.svg",
+    "static/media/columns-icon.svg": "/6mins-app/static/media/columns-icon.aa77569e3145d22e0bf548999680f273.svg",
+    "main.722d3632.css.map": "/6mins-app/static/css/main.722d3632.css.map",
+    "main.bae8acca.js.map": "/6mins-app/static/js/main.bae8acca.js.map",
+    "787.b9a69101.chunk.js.map": "/6mins-app/static/js/787.b9a69101.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.722d3632.css",
+    "static/js/main.bae8acca.js"
+  ]
+}
