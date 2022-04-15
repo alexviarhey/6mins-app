@@ -7,11 +7,17 @@ import ORANGE_WHEEL from '../../assets/icons/orange_wheel.svg';
 import PINK_WHEEL from '../../assets/icons/pink_wheel.svg';
 import YELLOW_WHEEL from '../../assets/icons/shester.svg';
 import { useNavigate } from 'react-router-dom';
+import { PassedSteps } from '../../App';
 
+type PropsType = {
+    redirectTo: string | null
+    setPassedStep: (value: PassedSteps) => void
+}
 
-const Calculating: React.FC = () => {
+const Calculating: React.FC<PropsType> = ({ redirectTo, setPassedStep }) => {
 
     const navigate = useNavigate();
+
     const wheels = [
         { icon: BLUE_WHEEL, className: 'blue-wheel' }, 
         { icon: ORANGE_WHEEL, className: 'orange-wheel' }, 
@@ -20,7 +26,9 @@ const Calculating: React.FC = () => {
     ];
 
     useEffect(() => {
+        if(redirectTo) navigate(redirectTo)
         setTimeout(() => {
+            setPassedStep(PassedSteps.CALCULATING)
             navigate('/summary');
         }, 4000)
     }, [])

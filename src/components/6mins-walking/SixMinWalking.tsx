@@ -5,23 +5,28 @@ import todo from '../../assets/images/to-do.svg'
 import './six-min-walking.scss'
 import {useNavigate} from "react-router-dom";
 import Button from "../button/button";
+import { PassedSteps } from "../../App";
 
 type PropsType = {
     distance: string | null
     onSubmit: (value: string) => void
+    redirectTo: string | null
+    setPassedStep: (value: PassedSteps) => void
 }
 
-const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit}) => {
+const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit, redirectTo, setPassedStep}) => {
 
     const navigate = useNavigate()
 
     useEffect(() => {
+        if(redirectTo) navigate(redirectTo)
         if (distance) form.setFieldsValue({distance})
     }, [])
 
     const [form] = Form.useForm();
 
     const onFinish = (values: { distance: string }) => {
+        setPassedStep(PassedSteps.WALKING)
         onSubmit(values.distance)
         console.log('Success:', values);
         navigate("/summary")
