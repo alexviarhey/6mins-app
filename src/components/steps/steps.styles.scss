@@ -7,8 +7,7 @@
 
 .technique_outer {
     display: flex;
-    min-height: 512px;
-    max-height: 512px;
+    height: 100%;
     padding: 106px 55px 48px 107px;
     background: #f8f9fa;
     &_left {
@@ -77,13 +76,12 @@
 }
 
 .restrictions_outer {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 56px 48px 0 107px;
     background: #7B5CFA;
-    min-height: 512px;
-    max-height: 512px;
     &-left {
         margin-right: 70px;
     }
@@ -116,6 +114,464 @@
                 display: flex;
                 align-items: center;
                 color: #FFFFFF;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .technique_outer {
+        padding: 106px 40px 48px 80px;
+        &_left {
+            padding-right: 80px;
+            &--title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 28px;
+            }
+            &--description {
+                margin-bottom: 30px;
+            }
+            .next-button {
+                max-width: 171px;
+            }
+        }
+        &_right {
+            img {
+                width: 440px;
+            }
+        }
+    }
+    .restrictions_outer .restrictions_outer-left {
+        margin-right: 30px;
+        img {
+            width: 320px;
+            height: 436px;
+        }
+    }
+    .restrictions_outer .restrictions_outer-right {
+        &--title {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 26px;
+        }
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .technique_outer {
+        &_left {
+            padding-right: 60px;
+            &--title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 28px;
+            }
+            &--description {
+                margin-bottom: 30px;
+                img {
+                    width: 32px;
+                    height: 27px;
+                    margin-right: 20px;
+                }
+                div {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+            }
+            &--requirements-title {
+                font-size: 17px;
+                line-height: 23px;
+                margin-bottom: 16px;
+            }
+            &--requirements-items {
+                &--item {
+                    margin-bottom: 8px;
+                    img {
+                        width: 30px;
+                        margin-right: 12px;
+                    }
+                    div {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 24px;
+                        color: #343F56;
+                    }
+                }
+            }
+            .next-button {
+                font-size: 15px;
+                padding: 0 16px;
+                height: 38px;
+            }
+        }
+        &_right {
+            img {
+                width: 439px;
+            }
+        }
+    }
+    .restrictions_outer .restrictions_outer-left {
+        margin-right: 20px;
+        img {
+            width: 300px;
+            height: 436px;
+        }
+    }
+    .restrictions_outer .restrictions_outer-right {
+        &--title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+        &--item {
+            margin-bottom: 8px;
+            div {
+                font-size: 15px;
+                line-height: 23px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .technique_outer {
+        padding: 106px 40px 48px 40px;
+        &_left {
+            padding-right: 40px;
+            &--title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 28px;
+            }
+            &--description {
+                margin-bottom: 30px;
+                img {
+                    width: 32px;
+                    height: 27px;
+                    margin-right: 12px;
+                }
+                div {
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+            }
+            &--requirements-title {
+                font-size: 17px;
+                line-height: 23px;
+                margin-bottom: 16px;
+            }
+            &--requirements-items {
+                &--item {
+                    margin-bottom: 8px;
+                    img {
+                        width: 30px;
+                        margin-right: 12px;
+                    }
+                    div {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 24px;
+                        color: #343F56;
+                    }
+                }
+            }
+            .next-button {
+                font-size: 15px;
+                padding: 0 16px;
+                height: 38px;
+            }
+        }
+        &_right {
+            img {
+                width: 430px;
+                height: 394px;
+            }
+        }
+    }
+    .restrictions_outer {
+        padding: 0px 48px 0 46px;
+    }
+    .restrictions_outer .restrictions_outer-left {
+        margin-right: 20px;
+        img {
+            width: 270px;
+            height: 406px;
+        }
+    }
+    .restrictions_outer .restrictions_outer-right {
+        &--title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+        &--item {
+            margin-bottom: 8px;
+            div {
+                font-size: 15px;
+                line-height: 23px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .technique_outer {
+        padding: 80px 40px 40px 40px;
+        &_left {
+            &--title {
+                font-size: 22px;
+                line-height: 24px;
+            }
+            &--description {
+                margin-bottom: 20px;
+                img {
+                    width: 28px;
+                    height: 23px;
+                    margin-right: 12px;
+                }
+                div {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            &--requirements-title {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 16px;
+            }
+            &--requirements-items {
+                &--item {
+                    img {
+                        width: 28px;
+                        margin-right: 12px;
+                    }
+                    div {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .next-button {
+                font-size: 15px;
+                padding: 0 16px;
+                height: 38px;
+            }
+        }
+        &_right {
+            img {
+                width: 400px;
+                height: 364px;
+            }
+        }
+    }
+    .restrictions_outer {
+        padding: 0px 40px 0 40px;
+    }
+    .restrictions_outer .restrictions_outer-left {
+        margin-right: 20px;
+        img {
+            width: 250px;
+            height: 400px;
+        }
+    }
+    .restrictions_outer .restrictions_outer-right {
+        &--title {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+        &--item {
+            margin-bottom: 8px;
+            div {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .technique_outer {
+        padding: 0 40px;
+        &_left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 0;
+            &--title {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .next-button {
+                font-size: 15px;
+                padding: 0 16px;
+                height: 38px;
+                max-width: 151px;
+            }
+        }
+        &_right {
+            display: none;
+        }
+    }
+    .restrictions_outer .restrictions_outer-left {
+        margin-right: 20px;
+        img {
+            width: 220px;
+            height: 370px;
+        }
+    }
+    .restrictions_outer .restrictions_outer-right {
+        &--title {
+            font-size: 17px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        &--item {
+            margin-bottom: 8px;
+            div {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .technique_outer {
+        padding: 0 20px;
+        &_left {
+            &--title {
+                font-size: 18px;
+                line-height: 20px;
+            }
+            &--description {
+                margin-bottom: 20px;
+                img {
+                    width: 25px;
+                    height: 20px;
+                    margin-right: 12px;
+                }
+                div {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            &--requirements-title {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 16px;
+            }
+            &--requirements-items {
+                &--item {
+                    img {
+                        width: 26px;
+                        margin-right: 12px;
+                    }
+                    div {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .restrictions_outer .restrictions_outer-left {
+        margin-right: 20px;
+        img {
+            width: 180px;
+            height: 320px;
+        }
+    }
+    .restrictions_outer .restrictions_outer-right {
+        &--title {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        &--item {
+            margin-bottom: 8px;
+            div {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .restrictions_outer {
+        padding: 0 20px;
+    }
+    .restrictions_outer .restrictions_outer-left {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .technique_outer {
+        padding: 0 20px;
+        &_left {
+            &--title {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            &--description {
+                margin-bottom: 16px;
+                img {
+                    width: 22px;
+                    height: 17px;
+                    margin-right: 12px;
+                }
+                div {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+            &--requirements-title {
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 12px;
+            }
+            &--requirements-items {
+                &--item {
+                    img {
+                        width: 24px;
+                        margin-right: 10px;
+                    }
+                    div {
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+            }
+            .next-button {
+                font-size: 13px;
+                padding: 0 12px;
+                height: 34px;
+                max-width: 134px !important;
+            }
+        }
+    }
+    .restrictions_outer {
+        padding: 40px 20px;
+    }
+    .restrictions_outer .restrictions_outer-right {
+        &--title {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 20px;
+        }
+        &--item {
+            margin-bottom: 8px;
+            div {
+                font-size: 12px;
+                line-height: 18px;
             }
         }
     }
