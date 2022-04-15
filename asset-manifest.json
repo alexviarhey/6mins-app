@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/6mins-app/static/css/main.722d3632.css",
-    "main.js": "/6mins-app/static/js/main.bae8acca.js",
+    "main.css": "/6mins-app/static/css/main.b6c98c62.css",
+    "main.js": "/6mins-app/static/js/main.e5ed8e5b.js",
     "static/js/787.b9a69101.chunk.js": "/6mins-app/static/js/787.b9a69101.chunk.js",
     "static/media/to-do.svg": "/6mins-app/static/media/to-do.fbee4785a556a2aff207f5c185a98453.svg",
     "static/media/analitic.svg": "/6mins-app/static/media/analitic.26765d3564a10bd7db50f5d10d949a8d.svg",
-    "static/media/Health-checkup.svg": "/6mins-app/static/media/Health-checkup.ee0d16618d228c1ff7159ad1c7c081f0.svg",
+    "static/media/Health-checkup.svg": "/6mins-app/static/media/Health-checkup.4314dba7577d581878c65e4f0e12f0cb.svg",
     "static/media/data-report.svg": "/6mins-app/static/media/data-report.e13e9e023a662ade644aef810cc17d8b.svg",
     "static/media/apply-form.svg": "/6mins-app/static/media/apply-form.c3ef186d405919495ced818fcdb0ca46.svg",
     "static/media/caution.svg": "/6mins-app/static/media/caution.cdcbe24359267825c8e582a474edc465.svg",
@@ -21,12 +21,12 @@
     "index.html": "/6mins-app/index.html",
     "static/media/check-square.svg": "/6mins-app/static/media/check-square.9b9334fa840c6f54f9d0d293dafd5ede.svg",
     "static/media/columns-icon.svg": "/6mins-app/static/media/columns-icon.aa77569e3145d22e0bf548999680f273.svg",
-    "main.722d3632.css.map": "/6mins-app/static/css/main.722d3632.css.map",
-    "main.bae8acca.js.map": "/6mins-app/static/js/main.bae8acca.js.map",
+    "main.b6c98c62.css.map": "/6mins-app/static/css/main.b6c98c62.css.map",
+    "main.e5ed8e5b.js.map": "/6mins-app/static/js/main.e5ed8e5b.js.map",
     "787.b9a69101.chunk.js.map": "/6mins-app/static/js/787.b9a69101.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.722d3632.css",
-    "static/js/main.bae8acca.js"
+    "static/css/main.b6c98c62.css",
+    "static/js/main.e5ed8e5b.js"
   ]
 }
