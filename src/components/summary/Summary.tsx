@@ -1,21 +1,30 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import check from '../../assets/icons/checkmark-pink.svg'
 import heart from '../../assets/icons/heart-beat-outlined.svg'
 import './summary.scss'
 import analitic from '../../assets/images/analitic.svg'
-import {FormsData} from "../../App";
+import {FormsData, PassedSteps} from "../../App";
 import {calculateAllRecommendations} from "../../recomendations/reccomendations";
 import {ZONES} from "../../recomendations/zones";
+import {useNavigate} from 'react-router-dom'
 
 type PropsType = {
     data: FormsData
+    redirectTo: string | null
+    setPassedStep: (value: PassedSteps) => void
 }
 
-const Summary: React.FC<PropsType> = ({data}) => {
+const Summary: React.FC<PropsType> = ({data, redirectTo, setPassedStep}) => {
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (redirectTo) navigate(redirectTo)
+        setPassedStep(PassedSteps.SUMMARY)
+    }, [])
 
     const res = calculateAllRecommendations(data)
 
-    console.log(res.recommendations)
 
     return (
         <div className='summary_outer'>

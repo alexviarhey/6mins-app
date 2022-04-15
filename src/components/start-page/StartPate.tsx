@@ -4,8 +4,13 @@ import healthCheckup from '../../assets/images/Health-checkup.svg'
 import {useNavigate} from "react-router-dom";
 import AnimatedCircle from '../animated-circle/AnimatedCircle';
 import Button from '../button/button';
+import { PassedSteps } from '../../App';
 
-const StartPage = () => {
+type PropsType = {
+    setPassedStep: (value: PassedSteps) => void
+}
+
+const StartPage: React.FC<PropsType> = ({ setPassedStep }) => {
 
     const navigate = useNavigate()
 
@@ -36,7 +41,10 @@ const StartPage = () => {
                 </div>
                 <Button 
                     name='Узнать больше' 
-                    onClick={() => navigate("/steps")} 
+                    onClick={() => {
+                        setPassedStep(PassedSteps.START)
+                        navigate("/steps")
+                    }}
                     className={'button'}
                 />
                 <img src={healthCheckup} alt='' />

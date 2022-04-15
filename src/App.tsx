@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, {useState} from 'react';
+import {Routes, Route} from 'react-router-dom';
 import StartPage from "./components/start-page/StartPate";
 import Steps from "./components/steps/Steps";
 import HealthForm from "./components/health-form/HealthForm";
@@ -28,15 +28,44 @@ export type FormsData = {
     distance: string | null
 }
 
-enum PassesSteps {
+export enum PassedSteps {
     START,
     STEPS,
     FORM,
-    WALKING
+    WALKING,
+    CALCULATING,
+    SUMMARY
 }
 
 function App() {
-    const [passedStep, setPassedStep] = useState<PassesSteps | null>(null)
+    const [passedStep, setPassedStep] = useState<PassedSteps | null>(null)
+
+    const getRedirectValue = (): string | null => {
+
+        let path = null;
+
+        switch (passedStep) {
+            case null:
+                return "/"
+            case PassedSteps.START:
+                path = "/steps"
+                break
+            case PassedSteps.STEPS:
+                path = "/form"
+                break
+            case PassedSteps.FORM:
+                path = "/walking"
+                break
+            case PassedSteps.WALKING:
+                path = "/calculating"
+                break
+            case PassedSteps.SUMMARY:
+                path = null
+                break
+        }
+
+        return path
+    }
 
     const [data, setData] = useState<FormsData>({
         questionnaire: null,
@@ -59,12 +88,14 @@ function App() {
 
     return (
         <Routes>
-            <Route path={"/"} element={<StartPage/>}/>
-            <Route path={"/steps"} element={<Steps/>}/>
-            <Route path={"/form"} element={<HealthForm data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
-            <Route path="/walking" element={<SixMinWalking distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
-            <Route path={"/calculating"} element={<Calculating />}/>
-            <Route path="/summary" element={<Summary data={data}/>}/>
+            <Route path={"/"} element={<StartPage setPassedStep={setPassedStep}/>}/>
+            <Route path={"/steps"} element={<Steps setPassedStep={setPassedStep} redirectTo={passedStep === null ? "/" : null}/>}/>
+            <Route path={"/form"}
+                   element={<HealthForm setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.FORM) ? null : getRedirectValue()} data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
+            <Route path="/walking" element={<SixMinWalking setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.WALKING) ? null : getRedirectValue()} distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
+            <Route path={"/calculating"} element={<Calculating setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.CALCULATING) ? null : getRedirectValue()}/>}/>
+            <Route path="/summary" element={<Summary setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.SUMMARY) ? null : getRedirectValue()} data={data}/>}/>
+            <Route path='*' element={<StartPage setPassedStep={setPassedStep}/>}/>
         </Routes>
     );
 }

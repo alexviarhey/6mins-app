@@ -3,7 +3,7 @@ import apply from '../../assets/images/apply-form.svg'
 import {Form, Input, Radio } from 'antd';
 import './health-form.scss'
 import {CheckboxChangeEvent} from "antd/es/checkbox";
-import {QuestionnaireType} from "../../App";
+import {PassedSteps, QuestionnaireType} from "../../App";
 import Button from '../button/button';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {useNavigate} from "react-router-dom";
@@ -14,13 +14,16 @@ import Checkbox from '../checkbox/Checkbox';
 type PropsType = {
     data: QuestionnaireType | null
     onSubmit: (data: QuestionnaireType) => void
+    redirectTo: string | null
+    setPassedStep: (value: PassedSteps) => void
 }
 
-const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
+const HealthForm: React.FC<PropsType> = ({data, onSubmit, redirectTo, setPassedStep}) => {
 
     const navigate = useNavigate()
 
     useEffect(() => {
+        if(redirectTo) navigate(redirectTo)
         if (data) form.setFieldsValue(data)
     }, [])
 
@@ -49,6 +52,7 @@ const HealthForm: React.FC<PropsType> = ({data, onSubmit}) => {
     }
 
     const onFinish = (values: QuestionnaireType) => {
+        setPassedStep(PassedSteps.FORM)
         onSubmit(values)
         console.log('Success:', values);
         navigate("/walking")

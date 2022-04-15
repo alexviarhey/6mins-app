@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './steps.styles.scss'
 import heart from '../../assets/icons/heart-beat-filled.svg'
 import shoe from '../../assets/icons/shoe-icon.svg'
@@ -8,11 +8,25 @@ import caution from '../../assets/images/caution.svg'
 import { useNavigate } from "react-router-dom";
 import Button from '../button/button'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { PassedSteps } from '../../App'
 
-const Steps = () => {
+type PropsType = {
+    redirectTo: string | null
+    setPassedStep: (value: PassedSteps) => void
+}
+
+const Steps: React.FC<PropsType> = ({ redirectTo, setPassedStep }) => {
     const navigate = useNavigate()
 
+    useEffect(() => {
+        if(redirectTo) {
+            navigate(redirectTo)
+        }
+    }, [])
+
+
     const next = () => {
+        setPassedStep(PassedSteps.STEPS)
         navigate('/form')
     }
 
