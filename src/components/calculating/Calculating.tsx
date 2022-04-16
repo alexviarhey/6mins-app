@@ -30,7 +30,7 @@ const Calculating: React.FC<PropsType> = ({ redirectTo, setPassedStep }) => {
         setTimeout(() => {
             setPassedStep(PassedSteps.CALCULATING)
             navigate('/summary');
-        }, 4000)
+        }, 3000)
     }, [])
 
     return (

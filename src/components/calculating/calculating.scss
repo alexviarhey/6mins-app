@@ -48,3 +48,128 @@
         }
     }
 }
+
+@media screen and (max-height: 800px) {
+    .calculating {
+        padding-top: 30px;
+        &-inner {
+            &--illustration {
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .calculating {
+        &-inner {
+            &--illustration {
+                max-width: 620px;
+            }
+        }
+    }
+    .orange-wheel {
+        right: 8.14%;
+        top: 23% !important;
+        width: 108px;
+    }
+    .pink-wheel {
+        width: 108px;
+        left: 8% !important;
+        top: 72% !important;
+    }
+    .yellow-wheel {
+        width: 140px;
+        top: 11% !important;
+        ;
+        left: 10% !important;
+        ;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .calculating {
+        &-inner {
+            &--illustration {
+                max-width: 520px;
+            }
+        }
+    }
+    .orange-wheel {
+        right: 8.14% !important;
+        top: 18% !important;
+        width: 100px;
+    }
+    .pink-wheel {
+        width: 100px;
+        left: 8% !important;
+        top: 86% !important;
+    }
+    .yellow-wheel {
+        width: 120px;
+        top: 9% !important;
+        left: 10% !important;
+    }
+    .blue-wheel {
+        bottom: 8% !important;
+        width: 65px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .calculating {
+        &-inner {
+            &--illustration {
+                max-width: 420px;
+            }
+        }
+    }
+    .orange-wheel {
+        width: 84px;
+        right: 6% !important;
+    }
+    .pink-wheel {
+        width: 86px;
+        top: 80% !important;
+    }
+    .yellow-wheel {
+        width: 90px;
+        top: 4% !important;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .calculating {
+        &-inner {
+            &--illustration {
+                max-width: 340px;
+            }
+        }
+    }
+    .orange-wheel {
+        width: 76px;
+    }
+    .pink-wheel {
+        width: 76px;
+    }
+    .yellow-wheel {
+        width: 86px;
+    }
+    .blue-wheel {
+        width: 62px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .calculating {
+        &-inner {
+            &--illustration {
+                max-width: 310px;
+            }
+        }
+    }
+    .pink-wheel {
+        width: 76px;
+        top: 76% !important;
+    }
+}
