@@ -56,22 +56,21 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit, redirectTo, set
                                 <div className='walking_top_container-left-items-item'>
                                 <img src={checkSquare} alt=""/>
                                 <div>
-                                    Выберите место с заранее известным метражом (например длина комнатв вдоль одной из
-                                    стен,
-                                    по
-                                    коридору)
+                                    Выберите место с заранее известным метражом (например длина комнаты вдоль одной из
+                                    стен, по коридору)
                                 </div>
                             </div>
                             <div className='walking_top_container-left-items-item'>
                                 <img src={checkSquare} alt=""/>
                                 <div>
-                                    Затем, в течении 6 минут выполнения теста ( ходьба по коридору, вдоль стены по
+                                    Затем, в течении 6 минут выполнения теста (ходьба по коридору, вдоль стены по
                                     комнате
                                     туда
-                                    и обратно необходимо пройти как можно большее расстояние.
+                                    и обратно) необходимо пройти как можно большее расстояние.
                                     <span>
                                     <br/>
                                     ! Нельзя бегать или перемещаться перебежками  
+                                    <br/>
                                     ! При появлении отдышки или слабости, необходимо замедлить темп ходьбы, остановиться
                                     и отдохнуть, а затем продолжить ходьбу
                                 </span>
@@ -80,7 +79,7 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit, redirectTo, set
                             <div className='walking_top_container-left-items-item'>
                                 <img src={checkSquare} alt=""/>
                                 <div>
-                                    По истечении 6 минут следует остановиться и подсчитать ЧСС ( пульс ) и измерить АД,
+                                    По истечении 6 минут следует остановиться и подсчитать ЧСС (пульс) и измерить АД,
                                     подсчитать пройденное расстояние с точностью до 1 метра
                                 </div>
                             </div>
@@ -108,7 +107,7 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit, redirectTo, set
                                 rules={[{required: true, message: ''}]}
                                 name="distance"
                             >
-                                <Input type='number'/>
+                                <Input type='number' className="walking_bottom_container_distance--input"/>
                             </Form.Item>
                         </div>
                         <div className='walking_bottom_container_tables'>
@@ -117,7 +116,7 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit, redirectTo, set
                                     <tr>
                                         <th className='th-first'/>
                                         <th>В покое сидя</th>
-                                        <th>Сразу после теста 6-ти минуты</th>
+                                        <th>Сразу после теста 6-ти минут</th>
                                         <th>До 4-й минуты</th>
                                         <th>До 6-й минуты</th>
                                         <th>До 10-й минуты</th>
@@ -155,8 +154,15 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit, redirectTo, set
                                         <td contentEditable='true'/>
                                     </tr>
                                 </table>
+                                <Form.Item style={{ marginBottom: 0 }}>
+                                    <Button 
+                                        name="Завершить" 
+                                        type="submit"
+                                        className="finish-table-button" 
+                                    />
+                                </Form.Item>
                             </div>
-                            <div>
+                            <div className="borg_wrapper">
                                 <div className='borg_outer'>
                                     <div className='borg_outer--title'>
                                         <b>Шкала Борга</b> для оценки пациентом переносимости физических нагрузок.
@@ -177,15 +183,15 @@ const SixMinWalking: React.FC<PropsType> = ({distance, onSubmit, redirectTo, set
                                         <div><b>10</b> — максимальная нагрузка</div>
                                     </div>
                                 </div>
-                                <div>
-                                    <Form.Item>
+                                {/* <div>
+                                    <Form.Item style={{ marginBottom: 0 }}>
                                         <Button 
                                             name="Завершить" 
                                             type="submit"
                                             className="finish-button" 
                                         />
                                     </Form.Item>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
