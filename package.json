@@ -2,6 +2,7 @@
     "name": "6mins-app",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://alexviarhey.github.io/6mins-app/",
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.1.1",
         "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -17,6 +18,9 @@
         "@types/react-dom": "^18.0.0",
         "antd": "^4.19.5",
         "classnames": "^2.3.1",
+        "express": "^4.17.3",
+        "express-favicon": "^2.0.1",
+        "gh-pages": "^3.2.3",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-router-dom": "^6.3.0",
@@ -29,7 +33,9 @@
         "start": "serve -s build",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
