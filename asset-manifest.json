@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/6mins-app/static/css/main.b6c98c62.css",
-    "main.js": "/6mins-app/static/js/main.e5ed8e5b.js",
+    "main.css": "/6mins-app/static/css/main.6670d115.css",
+    "main.js": "/6mins-app/static/js/main.630b4156.js",
     "static/js/787.b9a69101.chunk.js": "/6mins-app/static/js/787.b9a69101.chunk.js",
     "static/media/to-do.svg": "/6mins-app/static/media/to-do.fbee4785a556a2aff207f5c185a98453.svg",
     "static/media/analitic.svg": "/6mins-app/static/media/analitic.26765d3564a10bd7db50f5d10d949a8d.svg",
@@ -17,16 +17,16 @@
     "static/media/heart-beat-outlined.svg": "/6mins-app/static/media/heart-beat-outlined.7157022a213ebc2c9bc3aa5e87428a64.svg",
     "static/media/heart-beat-filled.svg": "/6mins-app/static/media/heart-beat-filled.98bec37282bc30c45247017fc7b16d08.svg",
     "static/media/checkmark-pink.svg": "/6mins-app/static/media/checkmark-pink.11812edb44ab642033c201713683612a.svg",
-    "static/media/shoe-icon.svg": "/6mins-app/static/media/shoe-icon.b04f6de012700f00633fa02a25e23eaa.svg",
     "index.html": "/6mins-app/index.html",
+    "static/media/shoe-icon.svg": "/6mins-app/static/media/shoe-icon.b04f6de012700f00633fa02a25e23eaa.svg",
     "static/media/check-square.svg": "/6mins-app/static/media/check-square.9b9334fa840c6f54f9d0d293dafd5ede.svg",
     "static/media/columns-icon.svg": "/6mins-app/static/media/columns-icon.aa77569e3145d22e0bf548999680f273.svg",
-    "main.b6c98c62.css.map": "/6mins-app/static/css/main.b6c98c62.css.map",
-    "main.e5ed8e5b.js.map": "/6mins-app/static/js/main.e5ed8e5b.js.map",
+    "main.6670d115.css.map": "/6mins-app/static/css/main.6670d115.css.map",
+    "main.630b4156.js.map": "/6mins-app/static/js/main.630b4156.js.map",
     "787.b9a69101.chunk.js.map": "/6mins-app/static/js/787.b9a69101.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6c98c62.css",
-    "static/js/main.e5ed8e5b.js"
+    "static/css/main.6670d115.css",
+    "static/js/main.630b4156.js"
   ]
 }
