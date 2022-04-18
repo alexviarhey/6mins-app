@@ -3,7 +3,6 @@ import {Routes, Route} from 'react-router-dom';
 import StartPage from "./components/start-page/StartPate";
 import Steps from "./components/steps/Steps";
 import HealthForm from "./components/health-form/HealthForm";
-import Calculating from './components/calculating/Calculating';
 import SixMinWalking from './components/6mins-walking/SixMinWalking';
 import Summary from './components/summary/Summary';
 
@@ -93,7 +92,6 @@ function App() {
             <Route path={"/form"}
                    element={<HealthForm setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.FORM) ? null : getRedirectValue()} data={data.questionnaire} onSubmit={onHealthFormSubmit}/>}/>
             <Route path="/walking" element={<SixMinWalking setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.WALKING) ? null : getRedirectValue()} distance={data.distance} onSubmit={onSixMinutesSubmit}/>}/>
-            <Route path={"/calculating"} element={<Calculating setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.CALCULATING) ? null : getRedirectValue()}/>}/>
             <Route path="/summary" element={<Summary setPassedStep={setPassedStep} redirectTo={(passedStep && passedStep >= PassedSteps.SUMMARY) ? null : getRedirectValue()} data={data}/>}/>
             <Route path='*' element={<StartPage setPassedStep={setPassedStep}/>}/>
         </Routes>

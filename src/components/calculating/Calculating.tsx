@@ -10,11 +10,11 @@ import { useNavigate } from 'react-router-dom';
 import { PassedSteps } from '../../App';
 
 type PropsType = {
-    redirectTo: string | null
+    onFinish: () => void
     setPassedStep: (value: PassedSteps) => void
 }
 
-const Calculating: React.FC<PropsType> = ({ redirectTo, setPassedStep }) => {
+const Calculating: React.FC<PropsType> = ({ onFinish, setPassedStep }) => {
 
     const navigate = useNavigate();
 
@@ -26,10 +26,10 @@ const Calculating: React.FC<PropsType> = ({ redirectTo, setPassedStep }) => {
     ];
 
     useEffect(() => {
-        if(redirectTo) navigate(redirectTo)
         setTimeout(() => {
             setPassedStep(PassedSteps.CALCULATING)
             navigate('/summary');
+            onFinish();
         }, 3000)
     }, [])
 
